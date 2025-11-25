@@ -1,4 +1,4 @@
-📄 Local Document Q&A (RAG + OCR + Local LLM)
+Local Document Q&A (RAG + OCR + Local LLM)
 
 A simple backend application that lets you **ask questions about your local documents** (PDF, TXT, MD) using a **Retrieval-Augmented Generation (RAG)** pipeline with:
 
@@ -10,7 +10,7 @@ A simple backend application that lets you **ask questions about your local docu
 
 ---
 
-## 🚀 Features
+## Features
 
 * Ask questions about any file you drop into the `data/` folder
 * Supports text PDFs and **scanned/image PDFs**
@@ -19,7 +19,7 @@ A simple backend application that lets you **ask questions about your local docu
 
 ---
 
-## 📦 Setup
+## Setup
 
 ### 1) Clone and create virtual environment
 
@@ -60,7 +60,7 @@ tesseract --version
 
 ---
 
-## ▶️ Run the API
+## Run the API
 
 ```bash
 uvicorn app.main:app --host 127.0.0.1 --port 8000 --reload
@@ -68,7 +68,7 @@ uvicorn app.main:app --host 127.0.0.1 --port 8000 --reload
 
 ---
 
-## 📥 Ingest Your Documents
+## Ingest Your Documents
 
 Place files in:
 
@@ -84,7 +84,7 @@ Invoke-RestMethod -Method POST -Uri http://127.0.0.1:8000/ingest
 
 ---
 
-## ❓ Ask a Question
+## Ask a Question
 
 ```powershell
 $body = @{ question = 'What is the total work experience in the CV?' } | ConvertTo-Json
@@ -93,7 +93,7 @@ Invoke-RestMethod -Method POST -Uri 'http://127.0.0.1:8000/query' -ContentType '
 
 ---
 
-## 🧪 Check System Status
+## Check System Status
 
 ```bash
 Invoke-RestMethod http://127.0.0.1:8000/stats
@@ -101,7 +101,7 @@ Invoke-RestMethod http://127.0.0.1:8000/stats
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 app/
